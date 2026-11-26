@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 440" width="960" height="440" role="img" aria-labelledby="t d">
+<title id="t">flake.nix evaluation</title>
+<desc id="d">The nixpkgs (nixos-unstable) and flake-utils inputs feed eachDefaultSystem, which builds an empty mkShell as devShell for x86_64-linux, aarch64-linux, x86_64-darwin and aarch64-darwin.</desc>
+<style>
+:root{--bg:#F4F7FB;--card:#FFFFFF;--ink:#172338;--muted:#5B6B82;--line:#C9D3E1;--nix:#4D6FB8;--signal:#E3A21A;--lit:#EAF0FB}
+@media (prefers-color-scheme:dark){:root{--bg:#0E1726;--card:#15223A;--ink:#E3EAF5;--muted:#8C9BB3;--line:#2C3B57;--nix:#7EA6F0;--signal:#F2B84B;--lit:#1C2E50}}
+.bg{fill:var(--bg)}
+.mono{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,"DejaVu Sans Mono","Liberation Mono",monospace}
+.sans{font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif}
+.file{fill:var(--ink);font-size:15px;font-weight:700}
+.head{fill:var(--muted);font-size:13px}
+.name{fill:var(--ink);font-size:14px;font-weight:700}
+.sub{fill:var(--muted);font-size:12px}
+.sh{fill:var(--ink);font-size:13px}
+.cmd{fill:var(--ink);font-size:13px}
+.prompt{fill:var(--nix);font-weight:700}
+.wire{fill:none;stroke:var(--line);stroke-width:2}
+.pulse{fill:none;stroke:var(--signal);stroke-width:2.5;stroke-linecap:round;opacity:.55}
+.card{fill:var(--card);stroke:var(--line);stroke-width:1.5}
+.hub{fill:var(--lit);stroke:var(--nix);stroke-width:2}
+.shell{fill:var(--lit);stroke:var(--nix);stroke-width:1.5}
+.cursor{fill:var(--nix)}
+@media (prefers-reduced-motion:no-preference){
+.pulse{opacity:1;stroke-dasharray:14 130;stroke-dashoffset:14}
+.in .pulse{animation:flowIn 8s cubic-bezier(.45,0,.55,1) infinite}
+.out .pulse{animation:flowOut 8s cubic-bezier(.45,0,.55,1) infinite}
+.src{animation:src 8s ease-in-out infinite}
+.hub{animation:hub 8s ease-in-out infinite}
+.shell{animation:shell 8s ease-in-out infinite both}
+.cmd{animation:type 8s steps(13,end) infinite both}
+.cursor{animation:blink 8s linear infinite both}
+.s2 .shell,.s2 .cmd,.s2 .cursor{animation-delay:.12s}
+.s3 .shell,.s3 .cmd,.s3 .cursor{animation-delay:.24s}
+.s4 .shell,.s4 .cmd,.s4 .cursor{animation-delay:.36s}
+}
+@keyframes src{0%,100%{stroke:var(--line)}4%,14%{stroke:var(--signal)}24%{stroke:var(--line)}}
+@keyframes flowIn{0%,6%{stroke-dashoffset:14}30%,100%{stroke-dashoffset:-100}}
+@keyframes hub{0%,24%{fill:var(--card);stroke:var(--line)}32%,86%{fill:var(--lit);stroke:var(--nix)}96%,100%{fill:var(--card);stroke:var(--line)}}
+@keyframes flowOut{0%,32%{stroke-dashoffset:14}54%,100%{stroke-dashoffset:-100}}
+@keyframes shell{0%,50%{fill:var(--card);stroke:var(--line)}56%,88%{fill:var(--lit);stroke:var(--nix)}96%,100%{fill:var(--card);stroke:var(--line)}}
+@keyframes type{0%,58%{clip-path:inset(0 100% 0 0)}72%,90%{clip-path:inset(0 0 0 0)}96%,100%{clip-path:inset(0 100% 0 0)}}
+@keyframes blink{0%,58%{opacity:0}59%,64%{opacity:1}65%,69%{opacity:0}70%,75%{opacity:1}76%,80%{opacity:0}81%,90%{opacity:1}91%,100%{opacity:0}}
+</style>
+<rect class="bg" width="960" height="440"/>
+
+<text class="mono file" x="40" y="48">flake.nix</text>
+<text class="sans head" x="40" y="92">inputs</text>
+<text class="sans head" x="360" y="92">for each default system</text>
+<text class="sans head" x="710" y="92">outputs</text>
+
+<g class="in">
+<path class="wire" d="M250 208C305 208 305 256 360 256"/>
+<path class="wire" d="M250 304C305 304 305 256 360 256"/>
+<path class="pulse" pathLength="100" d="M250 208C305 208 305 256 360 256"/>
+<path class="pulse" pathLength="100" d="M250 304C305 304 305 256 360 256"/>
+</g>
+<g class="out">
+<path class="wire" d="M600 256C655 256 655 136 710 136"/>
+<path class="wire" d="M600 256C655 256 655 216 710 216"/>
+<path class="wire" d="M600 256C655 256 655 296 710 296"/>
+<path class="wire" d="M600 256C655 256 655 376 710 376"/>
+<path class="pulse" pathLength="100" d="M600 256C655 256 655 136 710 136"/>
+<path class="pulse" pathLength="100" d="M600 256C655 256 655 216 710 216"/>
+<path class="pulse" pathLength="100" d="M600 256C655 256 655 296 710 296"/>
+<path class="pulse" pathLength="100" d="M600 256C655 256 655 376 710 376"/>
+</g>
+
+<g transform="translate(40 176)">
+<rect class="card src" width="210" height="64" rx="10"/>
+<text class="mono name" x="16" y="27">nixpkgs</text>
+<text class="mono sub" x="16" y="47">nixos-unstable</text>
+</g>
+<g transform="translate(40 272)">
+<rect class="card src" width="210" height="64" rx="10"/>
+<text class="mono name" x="16" y="27">utils</text>
+<text class="mono sub" x="16" y="47">numtide/flake-utils</text>
+</g>
+
+<g transform="translate(360 216)">
+<rect class="hub" width="240" height="80" rx="14"/>
+<text class="mono name" x="16" y="34">eachDefaultSystem</text>
+<text class="mono sub" x="16" y="58">mkShell { buildInputs = [ ]; }</text>
+</g>
+
+<g class="s1" transform="translate(710 104)">
+<rect class="shell" width="220" height="64" rx="10"/>
+<text class="mono sh" x="16" y="26">devShell.x86_64-linux</text>
+<text class="mono cmd" x="16" y="48"><tspan class="prompt">$</tspan> nix develop</text>
+<rect class="cursor" x="122" y="37" width="7" height="14" rx="1"/>
+</g>
+<g class="s2" transform="translate(710 184)">
+<rect class="shell" width="220" height="64" rx="10"/>
+<text class="mono sh" x="16" y="26">devShell.aarch64-linux</text>
+<text class="mono cmd" x="16" y="48"><tspan class="prompt">$</tspan> nix develop</text>
+<rect class="cursor" x="122" y="37" width="7" height="14" rx="1"/>
+</g>
+<g class="s3" transform="translate(710 264)">
+<rect class="shell" width="220" height="64" rx="10"/>
+<text class="mono sh" x="16" y="26">devShell.x86_64-darwin</text>
+<text class="mono cmd" x="16" y="48"><tspan class="prompt">$</tspan> nix develop</text>
+<rect class="cursor" x="122" y="37" width="7" height="14" rx="1"/>
+</g>
+<g class="s4" transform="translate(710 344)">
+<rect class="shell" width="220" height="64" rx="10"/>
+<text class="mono sh" x="16" y="26">devShell.aarch64-darwin</text>
+<text class="mono cmd" x="16" y="48"><tspan class="prompt">$</tspan> nix develop</text>
+<rect class="cursor" x="122" y="37" width="7" height="14" rx="1"/>
+</g>
+</svg>
